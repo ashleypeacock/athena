@@ -4,6 +4,7 @@
     <string name="alert_help">Alert now</string>
     <string name="resources">Resources</string>
     <string name="community">Community</string>
+    <string name="setup_modes">Preferences</string>
 
     <string-array name="modes_array">
         <item>High</item>

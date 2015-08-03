@@ -1,44 +1,55 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/black"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@drawable/curved_white_background"
+        android:orientation="vertical"
         android:padding="5dp">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/bt_resources"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/resources"/>
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/bt_community"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/community"/>
+            <Button
+                android:id="@+id/bt_resources"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resources" />
+
+            <Button
+                android:id="@+id/bt_community"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/community" />
+
+            <Button
+                android:id="@+id/bt_setup_modes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setup_modes"
+                android:onClick="openModePreferences"/>
 
         </LinearLayout>
 
         <Button
             android:id="@+id/bt_alert_now"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/alert_help"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
-            />
+            android:background="@drawable/alert_button"
+            android:text="@string/alert_help"
+            android:textColor="@color/white" />
 
         <RelativeLayout
             android:id="@+id/rl_current_status"
@@ -49,16 +60,15 @@
                 android:id="@+id/tv_current_mode_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Current mode"/>
+                android:text="Current mode" />
 
             <TextView
                 android:id="@+id/tv_current_alert_mode"
-                android:background="@drawable/border_alert_high"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="High"
                 android:layout_below="@id/tv_current_mode_text"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:text="High" />
 
         </RelativeLayout>
 
